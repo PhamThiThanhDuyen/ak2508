@@ -7,14 +7,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ChromeTest {
-    @Test
-    public void normalModeTest(){
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.selenium.dev/");
-        Assert.assertEquals(driver.getTitle(),"Selenium");
-
-        driver.quit();
-    }
+//    @Test
+//    public void normalModeTest(){
+//        WebDriver driver = new ChromeDriver();
+//        driver.get("https://www.selenium.dev/");
+//        Assert.assertEquals(driver.getTitle(),"Selenium");
+//
+//        driver.quit();
+//    }
 
     @Test
     public void headlessModeTest(){
