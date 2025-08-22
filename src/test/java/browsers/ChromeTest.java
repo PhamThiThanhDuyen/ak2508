@@ -20,32 +20,43 @@ public class ChromeTest {
 //    }
 
     @Test
-    public void headlessModeTest(){
+    public void headlessModeTest() {
         // dung run tren github
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
 
         WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("https://www.selenium.dev/");
-        Assert.assertEquals(driver.getTitle(),"Selenium");
+        Assert.assertEquals(driver.getTitle(), "Selenium");
 
         driver.quit();
     }
 
-    @Test
-    void openBrowserWithMobileViewMode(){
-        Map<String, Object> deviceMetrics = new HashMap<>();
-        deviceMetrics.put("width", 344);
-        deviceMetrics.put("height", 882);
-        Map<String, Object> mobileEmulation = new HashMap<>();
-        mobileEmulation.put("deviceMetrics", deviceMetrics);
+//    @Test
+//    void openBrowserWithMobileViewMode(){
+//        Map<String, Object> deviceMetrics = new HashMap<>();
+//        deviceMetrics.put("width", 344);
+//        deviceMetrics.put("height", 882);
+//        Map<String, Object> mobileEmulation = new HashMap<>();
+//        mobileEmulation.put("deviceMetrics", deviceMetrics);
+//
+//        ChromeOptions chromeOptions = new ChromeOptions();
+//        chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
+//
+//        WebDriver driver = new ChromeDriver(chromeOptions);
+//        driver.get("https://www.selenium.dev/");
+//        Assert.assertEquals(driver.getTitle(),"Selenium");
+//        driver.quit();
+//    }
 
+    @Test
+    void openBrowserWithOldVersion() {
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
+        chromeOptions.setBrowserVersion("138");
 
         WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("https://www.selenium.dev/");
-        Assert.assertEquals(driver.getTitle(),"Selenium");
+        Assert.assertEquals(driver.getTitle(), "Selenium");
         driver.quit();
     }
 
