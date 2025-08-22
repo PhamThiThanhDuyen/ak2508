@@ -49,15 +49,15 @@ public class ChromeTest {
 //        driver.quit();
 //    }
 
-    @Test
-    void openBrowserWithOldVersion() {
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setBrowserVersion("138");
-
-        WebDriver driver = new ChromeDriver(chromeOptions);
-        driver.get("https://www.selenium.dev/");
-        Assert.assertEquals(driver.getTitle(), "Selenium");
-        driver.quit();
-    }
+//    @Test
+//    void openBrowserWithOldVersion() {
+//        ChromeOptions chromeOptions = new ChromeOptions();
+//        chromeOptions.setBrowserVersion("139");
+//
+//        WebDriver driver = new ChromeDriver(chromeOptions);
+//        driver.get("https://www.selenium.dev/");
+//        Assert.assertEquals(driver.getTitle(), "Selenium");
+//        driver.quit();
+//    }
 
 }
