@@ -48,4 +48,5 @@ public class ChromeTest {
         Assert.assertEquals(driver.getTitle(),"Selenium");
         driver.quit();
     }
+
 }
