@@ -32,22 +32,22 @@ public class ChromeTest {
         driver.quit();
     }
 
-//    @Test
-//    void openBrowserWithMobileViewMode(){
-//        Map<String, Object> deviceMetrics = new HashMap<>();
-//        deviceMetrics.put("width", 344);
-//        deviceMetrics.put("height", 882);
-//        Map<String, Object> mobileEmulation = new HashMap<>();
-//        mobileEmulation.put("deviceMetrics", deviceMetrics);
-//
-//        ChromeOptions chromeOptions = new ChromeOptions();
-//        chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
-//
-//        WebDriver driver = new ChromeDriver(chromeOptions);
-//        driver.get("https://www.selenium.dev/");
-//        Assert.assertEquals(driver.getTitle(),"Selenium");
-//        driver.quit();
-//    }
+    @Test
+    public void openBrowserWithMobileViewMode(){
+        Map<String, Object> deviceMetrics = new HashMap<>();
+        deviceMetrics.put("width", 344);
+        deviceMetrics.put("height", 882);
+        Map<String, Object> mobileEmulation = new HashMap<>();
+        mobileEmulation.put("deviceMetrics", deviceMetrics);
+
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
+
+        WebDriver driver = new ChromeDriver(chromeOptions);
+        driver.get("https://www.selenium.dev/");
+        Assert.assertEquals(driver.getTitle(),"Selenium");
+        driver.quit();
+    }
 
 //    @Test
 //    void openBrowserWithOldVersion() {
